@@ -14,5 +14,5 @@ from routs.visually_tests import *
 
 if __name__ == '__main__':
     models.init_db()
-    # model_user.create_test_users(n=10)
+    # model_user.create_test_users(n=10) #для тестов нужно заполнить users
     app.run(debug=False)
