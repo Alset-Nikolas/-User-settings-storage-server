@@ -3,12 +3,10 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import Session, relationship
 from sqlalchemy import (Integer, String, Column,
                         create_engine, ForeignKeyConstraint, UniqueConstraint)
-from datetime import datetime
 
 NAME_DB = 'user_info.db'
 Base = declarative_base()
 abs_path_file = os.path.abspath(__file__)[:-len('models.__inti__.py')]
-# engine = create_engine(f'sqlite:////{abs_path_file}/{NAME_DB}', echo=False)
 engine = create_engine(F'sqlite:///{NAME_DB}' + '?check_same_thread=False')
 session = Session(bind=engine)
 
@@ -36,6 +34,9 @@ class ParametrModel(Base):
         ForeignKeyConstraint(['user_id'], ['users.id']),
         UniqueConstraint('type', 'name')
     )
+
+    def __str__(self):
+        return f'name={self.name}, type={self.type}, value={self.value}'
 
 
 def init_db() -> None:

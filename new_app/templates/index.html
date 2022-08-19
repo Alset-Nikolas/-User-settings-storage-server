@@ -1,0 +1,62 @@
+<!DOCTYPE>
+<html>
+ <head>
+     <title>Tests</title>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+     <link href="static/style.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+    <div class="wrapper_add_user flex">
+        <div class="left-content">
+            <form action="/" method="POST">
+                <h3 class="text-form">Add user</h3>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="user_name">
+                </div>
+
+                <div class="button">
+                    <button type="submit">add</button>
+                </div>
+            </form>
+            <ul class="users">
+                {% for user in users %}
+                <li class="user">{{user.name}}
+                    <ol class="user_params">
+                        {% for param in user.params %}
+                         <li class="user">name:{{param.name}}, type: {{param.type}}, value:     {{param.value}}  </li>
+                        {% endfor %}
+                    </ol>
+                   </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+        <div class="right-content">
+            <form action="/add_param" method="POST">
+             <h3 class="text-form">Add param</h3>
+              <div>
+                <label for="name">Name user:</label>
+                <input type="text" id="param-name_user" name="user_name">
+              </div>
+              <div>
+                <label for="name">Name param:</label>
+                <input type="text" id="param-type_name" name="name">
+              </div>
+              <div>
+                <label for="name">Type:</label>
+                <input type="text" id="param-type" name="type">
+              </div>
+              <div>
+                <label for="name">Value:</label>
+                <input type="text" id="param-value" name="value">
+              </div>
+
+              <div class="button">
+                <button type="submit">add</button>
+              </div>
+             </form>
+        </div>
+    </div>
+ </body>
+</html>

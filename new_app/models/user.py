@@ -12,3 +12,11 @@ def create_test_users(n: int):
 
 def get_user(user_name: str):
     return session.query(UserModel).filter(UserModel.name == user_name).first()
+
+def get_all_user():
+    return session.query(UserModel).all()
+
+def add_user(user_name):
+    user = UserModel(name=user_name)
+    session.add(user)
+    session.commit()

@@ -1,5 +1,4 @@
 from models import ParametrModel, session, UserModel
-import typing
 from dataclass.param import Param
 from models.user import get_user
 
@@ -27,6 +26,5 @@ def update_param(user_name: str, param_update: Param) -> None:
     param = get_param(type=param_update.type, name=param_update.name)
     if param is None:
         create_param(param_update, user_name)
-
         return
     update_value_param(param, param_update.value)
