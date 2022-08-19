@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "7b146773-59e6-4375-b12d-14b95f4e5261",
+		"name": "TestServerUser",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetParamUser_1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"value\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/parameters/user_1/param1/int",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"parameters",
+						"user_1",
+						"param1",
+						"int"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateParam2User_1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"value\": \"str1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/parameters/user_1/param2/str",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"parameters",
+						"user_1",
+						"param2",
+						"str"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BadUpdateParam",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"value\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/parameters/user_10000/param1/int",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"parameters",
+						"user_10000",
+						"param1",
+						"int"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BadUpdateParamType",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"value\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/parameters/user_1/param1/str",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"parameters",
+						"user_1",
+						"param1",
+						"str"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserParam_1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/parameters/user_1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"parameters",
+						"user_1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserAllParam",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/parameters/user_1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"parameters",
+						"user_1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserAllParam Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/parameters/user_1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"parameters",
+						"user_1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:5000",
+			"type": "default"
+		}
+	]
+}
