@@ -10,7 +10,7 @@ from dataclass.param import get_param_obj_from_row
 
 class ParamUrl(Resource):
 
-    def post(self, user_name, type_name, type):
+    def post(self, user_name, param_name, type):
         '''	Установить параметр (1)'''
         if not request.is_json:
             return 'Ожидали json формат {value: 10}', 400
@@ -19,11 +19,11 @@ class ParamUrl(Resource):
         param_schema = schemas_param.ParamSchema()
 
         user_data = {'name': user_name}
-        param_data = {'name': type_name, 'type': type}
+        param_data = {'name': param_name, 'type': type}
 
         try:
             value = request.json['value']
-            if isinstance(value, int) and type == 'str':
+            if (isinstance(value, int) and type == 'str') or (isinstance(value, str) and type == 'int'):
                 raise ValidationError('value is integer')
             param_data['value'] = str(value)
             user_schema.load(user_data)
@@ -34,7 +34,10 @@ class ParamUrl(Resource):
         models_param.update_param(user_name, param)
         return 'ok', 200
 
-    def get(self, user_name, type_name, type):
+    def get(self, user_name, param_name, type):
+        '''
+            Получить параметр (имя юзера, имя параметра, тип) – если параметр не был задан, ошибка.
+        '''
         schema_param = schemas_param.ParamSchema()
         schema_user = schemas_user.UserSchema()
 
@@ -43,7 +46,7 @@ class ParamUrl(Resource):
         except ValidationError as exc:
             return exc.messages, 400
 
-        param = models_param.get_param(name=type_name, type=type)
+        param = models_param.get_param(name=param_name, type=type)
         if param:
             param_obj = get_param_obj_from_row([param.name, param.type, param.value])
             return [schema_param.dump(param_obj)], 200

@@ -20,7 +20,7 @@ class GetUserParams(Resource):
             return exc.messages, 400
         user = get_user(user_name)
         param_objs = [get_param_obj_from_row([param.name, param.type, param.value]) for param in user.params]
-        return [schema_dump.dump(param_objs, many=True)], 200
+        return schema_dump.dump(param_objs, many=True), 200
 
     def post(self, user_name):
         schema_user = schemas_user.UserSchema()
@@ -41,14 +41,17 @@ class GetUserParams(Resource):
                 param_info = item
                 try:
                     value = item['value']
-                    if isinstance(value, int) and item['type'] == 'str':
+                    if (isinstance(value, int) and type == 'str') or (isinstance(value, str) and type == 'int'):
                         raise ValidationError('value is integer')
-                    item['value'] = str(item['value'])
+                    param_info['value'] = str(item['value'])
                     param_obj = schema_param.load(param_info)
-                    param_info['Status'] = 'Ok'
+                    param_after_dump = schema_param.dump(param_obj)
+                    param_info['status'] = 'Ok'
+                    param_info['value'] = param_after_dump['value']
                     models_param.update_param(user_name, param_obj)
                 except ValidationError as exc:
-                    param_info['Status'] = 'ERROR'
+                    param_info['status'] = 'ERROR'
+                param_info['operation'] = 'SetParam'
                 params.append(param_info)
 
         return {'Results': params}

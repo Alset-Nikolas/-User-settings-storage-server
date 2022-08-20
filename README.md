@@ -1,5 +1,5 @@
 # User Setting API
-    Пояснение к структуре:
+##    Пояснение к структуре:
     
     new_app (Папка с проектом)
        |---> dataclass (dataclass обьекты )
@@ -20,10 +20,20 @@
        |         |-> style.css (Стили для роута /)
        |--> templates (Шаблоны)
        |         |-> index.html (Страничка для роута /)
+       |--> tests (Тесты)
+       |         |-> test.py (Тесты)
        |--> main.py (Основной файл запуска)
        |--> requirements.txt (Файл с зависимостями)
        |--> TestServerUser.postman_collection.json (Запросы для postman)
+       
        README.md (сейчас тут)
        Task.docx (Задание)
-       
-        
+
+## Запуск
+    1. cd new_app
+    2. python3 main.py
+    
+## Тесты   
+    pytest new_app/tests/test.py
+    postman collection (TestServerUser.postman_collection.json)
+    **Для тестов необходимо в main создать users-> model_user.create_test_users(n=10)
