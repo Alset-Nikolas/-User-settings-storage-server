@@ -140,11 +140,12 @@ def test_gets_params_user3():
     params = {'Query': [create_new_param('param1', 'int', 1)]}
     resp = requests.post(set_param_url, json=params)
     assert resp.status_code == 200, f'post request code = {resp.status_code}!= 200'
-    response=resp.json()
+    response = resp.json()
     assert 'Results' in response, f'Results not in {response}'
     res = response['Results']
     assert len(res) == 1, f'{len(res)} != 1'
     assert res[0] == {'name': 'param1', 'type': 'int', 'value': 1, 'status': 'Ok', 'operation': 'SetParam'}
+
 
 def test_gets_update_pdarams_user3():
     ''' Проверим: Установка параметров через JSON-API  '''
@@ -156,14 +157,11 @@ def test_gets_update_pdarams_user3():
     response = resp.json()
     assert 'Results' in response, f'Results not in {response}'
     res = response['Results']
-    assert len(res)==1, f'{len(res)} != 1'
+    assert len(res) == 1, f'{len(res)} != 1'
     item = res[0]
     assert item['status'] == 'Ok' and item['value'] == 'asd' and item['type'] == 'str'
 
     resp = requests.get(set_param_url)
-    assert resp.status_code==200
+    assert resp.status_code == 200
     items = resp.json()
-    assert len(items)==2
-
-
-
+    assert len(items) == 2

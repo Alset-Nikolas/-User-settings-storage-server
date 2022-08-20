@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a0c495c-77eb-4b31-bfd3-697ea704b9c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/new_app/tests/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/new_app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/new_app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_app/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/new_app/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_app/routs/param.py" beforeDir="false" afterPath="$PROJECT_DIR$/new_app/routs/param.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_app/routs/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/new_app/routs/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_app/tests/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/new_app/tests/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +36,7 @@
       <recent name="C:\Users\Anna\PycharmProjects\Probe\-User-settings-storage-server" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="-User-settings-storage-server" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -85,8 +81,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -122,40 +118,48 @@
       <option name="project" value="LOCAL" />
       <updated>1660984627546</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Дописал тесты">
+      <created>1660994687434</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1660994687434</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Очень черновой вариант API" />
     <MESSAGE value="Дописал визуальную страничку для тестов" />
     <MESSAGE value="Написал README.md пояснение к струкутуре кода" />
-    <option name="LAST_COMMIT_MESSAGE" value="Написал README.md пояснение к струкутуре кода" />
+    <MESSAGE value="Дописал тесты" />
+    <option name="LAST_COMMIT_MESSAGE" value="Дописал тесты" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1660984625879">
+    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1660994685689">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1660984625879" />
+    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1660994685689" />
     <state x="129" y="55" key="DiffContextDialog" timestamp="1660923195789">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="129" y="55" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1660923195789" />
-    <state width="1345" height="178" key="GridCell.Tab.0.bottom" timestamp="1660994348923">
+    <state width="1345" height="158" key="GridCell.Tab.0.bottom" timestamp="1660994963004">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1660994348923" />
-    <state width="1345" height="178" key="GridCell.Tab.0.center" timestamp="1660994348923">
+    <state width="1345" height="158" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1660994963004" />
+    <state width="1345" height="158" key="GridCell.Tab.0.center" timestamp="1660994963004">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1660994348923" />
-    <state width="1345" height="178" key="GridCell.Tab.0.left" timestamp="1660994348923">
+    <state width="1345" height="158" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1660994963004" />
+    <state width="1345" height="158" key="GridCell.Tab.0.left" timestamp="1660994963004">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1660994348923" />
-    <state width="1345" height="178" key="GridCell.Tab.0.right" timestamp="1660994348923">
+    <state width="1345" height="158" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1660994963004" />
+    <state width="1345" height="158" key="GridCell.Tab.0.right" timestamp="1660994963004">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1660994348923" />
+    <state width="1345" height="158" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1660994963004" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1660983392497">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
