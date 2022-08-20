@@ -30,6 +30,9 @@ class ParamSchema(Schema):
 
     @post_dump
     def add_type(self, data: typing.Dict, **kwargs) -> Param:
+        '''
+            Возвращаем правильный тип целому числу
+        '''
         if data['type'] == 'int':
             data['value'] = int(data['value'])
         return data

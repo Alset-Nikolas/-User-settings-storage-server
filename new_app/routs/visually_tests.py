@@ -1,5 +1,5 @@
 from main import app
-from flask import Flask, render_template, request
+from flask import render_template, request
 
 import models.user as model_user
 import models.param as model_param

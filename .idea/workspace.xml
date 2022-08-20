@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a0c495c-77eb-4b31-bfd3-697ea704b9c0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/new_app/routs/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_app/routs/global_func.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/new_app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_app/tests/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/new_app/tests/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_app/models/param.py" beforeDir="false" afterPath="$PROJECT_DIR$/new_app/models/param.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_app/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/new_app/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_app/routs/param.py" beforeDir="false" afterPath="$PROJECT_DIR$/new_app/routs/param.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_app/routs/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/new_app/routs/user.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +129,21 @@
       <option name="project" value="LOCAL" />
       <updated>1660994687434</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Дописал тесты">
+      <created>1660995310137</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1660995310137</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Дописал тесты">
+      <created>1660995439962</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1660995439962</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -136,34 +154,34 @@
     <option name="LAST_COMMIT_MESSAGE" value="Дописал тесты" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1660995308756">
+    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1660995438739">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1660995308756" />
+    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1660995438739" />
     <state x="129" y="55" key="DiffContextDialog" timestamp="1660923195789">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="129" y="55" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1660923195789" />
-    <state width="1345" height="178" key="GridCell.Tab.0.bottom" timestamp="1660995425372">
+    <state width="1345" height="178" key="GridCell.Tab.0.bottom" timestamp="1660997179464">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1660995425372" />
-    <state width="1345" height="178" key="GridCell.Tab.0.center" timestamp="1660995425372">
+    <state width="1345" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1660997179464" />
+    <state width="1345" height="178" key="GridCell.Tab.0.center" timestamp="1660997179464">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1660995425372" />
-    <state width="1345" height="178" key="GridCell.Tab.0.left" timestamp="1660995425372">
+    <state width="1345" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1660997179464" />
+    <state width="1345" height="178" key="GridCell.Tab.0.left" timestamp="1660997179464">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1660995425372" />
-    <state width="1345" height="178" key="GridCell.Tab.0.right" timestamp="1660995425372">
+    <state width="1345" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1660997179464" />
+    <state width="1345" height="178" key="GridCell.Tab.0.right" timestamp="1660997179464">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1660995425372" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1660983392497">
+    <state width="1345" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1660997179464" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1660995702883">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1660983392497" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1660995702883" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
