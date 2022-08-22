@@ -1,15 +1,36 @@
-from models import ParametrModel, session
+from models import ParametrModel, session, UserModel
 from dataclass.param import Param
 from models.user import get_user
 
 
 def get_param(type: str, name: str):
-    return session.query(ParametrModel).filter(ParametrModel.type == type).filter(ParametrModel.name == name).first()
+    return (
+        session.query(ParametrModel)
+        .filter(ParametrModel.type == type)
+        .filter(ParametrModel.name == name)
+        .first()
+    )
+
+
+def get_param_user(user_name: str, type: str, name: str):
+    return (
+        session.query(ParametrModel)
+        .join(UserModel, ParametrModel.user_id == UserModel.id)
+        .filter(UserModel.name == user_name)
+        .filter(ParametrModel.type == type)
+        .filter(ParametrModel.name == name)
+        .first()
+    )
 
 
 def create_param(param_update: Param, user_name: str):
     user = get_user(user_name)
-    new_param = ParametrModel(name=param_update.name, type=param_update.type, value=param_update.value, user_id=user.id)
+    new_param = ParametrModel(
+        name=param_update.name,
+        type=param_update.type,
+        value=param_update.value,
+        user_id=user.id,
+    )
     session.add(new_param)
     session.commit()
     return new_param
@@ -22,8 +43,8 @@ def update_value_param(param_obj: Param, new_value: str):
 
 
 def update_param(user_name: str, param_update: Param) -> None:
-    '''Обновляем параметр или создаем если такого нет'''
-    param = get_param(type=param_update.type, name=param_update.name)
+    """Обновляем параметр или создаем если такого нет"""
+    param = get_param_user(user_name, type=param_update.type, name=param_update.name)
     if param is None:
         create_param(param_update, user_name)
         return
